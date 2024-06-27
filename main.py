@@ -3,8 +3,8 @@ def main():
 
     result = True
 
-    if email[0].isalpha():
-        result = True
+    if not email[0].isalpha():
+        result = False
     
     elif len(email) <= 5 or len(email) >= 30:
         result = False
