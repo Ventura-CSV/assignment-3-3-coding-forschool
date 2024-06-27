@@ -5,16 +5,21 @@ def main():
 
     if email[0].isalpha:
         return True
+    
     elif len(email) <= 5 or len(email) >= 30:
         return False
-    elif email.find('@'):
+    
+    elif '@' not in email:
         result = False
     
     else:
         at_index = email.find('@')
-        if email.find('.', at_index) == 1:
+        if '.' not in email[at_index:]:
             result = False
-            
+        else:
+            result = True
+    
+    print(result)
     
 
 
